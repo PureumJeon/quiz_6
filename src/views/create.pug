@@ -1,0 +1,12 @@
+extends templates/layout
+
+block content
+  h1=pageTitle
+    div
+      form(action="/create", method="post")
+        input(type="text", name="title", placeholder="Title", required=true)
+        input(type="text", name="year", placeholder="Year", required=true)
+        input(type="text", name="rating", placeholder="Rating", required=true)
+        input(type="textarea", name="synopsis", placeholder="Synopsis", required=true)
+        input(type="text", name="genres", placeholder="Genres", required=true)
+        input(type="submit", value="submit")

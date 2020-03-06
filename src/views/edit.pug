@@ -1,0 +1,12 @@
+extends templates/layout
+
+block content
+  h1=pageTitle
+    div
+      form(action=routes.edit(movie.id), method="post", enctype="multipart/form-data")
+        input(type="text", name="title", placeholder="Title", value=movie.title)
+        input(type="text", name="year", placeholder="Year", value=movie.year)
+        input(type="text", name="rating", placeholder="Rating", value=movie.rating)
+        textarea(name="synopsis", placeholder="Synopsis")=movie.synopsis
+        input(type="text", name="genres", placeholder="Genres", value=genreString)
+        input(type="submit", value="submit")
